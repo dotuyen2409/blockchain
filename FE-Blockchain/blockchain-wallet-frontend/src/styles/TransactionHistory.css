@@ -1,0 +1,70 @@
+/* src/styles/TransactionHistory.css */
+
+.transaction-history-container {
+  background-color: rgba(0, 0, 0, 0.8); /* Màu nền mờ */
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Tạo bóng đổ cho container */
+  backdrop-filter: blur(8px); /* Làm mờ background */
+  color: #fff; /* Text màu trắng */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3498db; /* Màu xanh đẹp cho tiêu đề */
+}
+
+.transaction-item {
+  background-color: rgba(255, 255, 255, 0.1); /* Màu nền giao dịch */
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.transaction-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Tạo hiệu ứng hover cho mục giao dịch */
+}
+
+.transaction-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.transaction-item p span {
+  font-weight: bold; /* Làm đậm các thông tin quan trọng */
+}
+
+button {
+  background-color: #3498db; /* Màu nút đẹp */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #2980b9; /* Màu khi hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f39c12;
+}

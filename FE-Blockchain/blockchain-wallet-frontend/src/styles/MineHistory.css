@@ -1,0 +1,91 @@
+/* MineHistory.css */
+/* Giả sử bạn đặt tên file là MineHistory.css và import vào MineHistory.js */
+
+/* Khung tổng thể của trang Lịch Sử Đào Coin */
+.mine-history-container {
+  /* Nền màu đen mờ */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Hiệu ứng mờ phía sau (cần hỗ trợ của trình duyệt) */
+  backdrop-filter: blur(5px);
+
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+
+  /* Đổ bóng nhẹ */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+  /* Đảm bảo chiều rộng tối đa, canh giữa nếu cần */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tiêu đề Lịch Sử Đào Coin */
+.mine-history-container h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Tùy chọn: viết hoa toàn bộ */
+}
+
+/* Danh sách hiển thị các lần đào coin */
+.mine-history-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Từng mục trong danh sách đào coin */
+.mine-history-list li {
+  background-color: rgba(255, 255, 255, 0.1); /* Màu trắng trong suốt nhẹ */
+  color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+
+  /* Thêm hiệu ứng chuyển đổi khi hover */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào mỗi mục */
+.mine-history-list li:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Thông tin text bên trong mỗi mục */
+.mine-history-list li p {
+  margin: 5px 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Khi không có lịch sử, đoạn text thông báo */
+.no-history {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Tùy chọn: thêm hiệu ứng cho link, nút (nếu có) */
+.mine-history-container a,
+.mine-history-container button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mine-history-container a:hover,
+.mine-history-container button:hover {
+  background-color: #2980b9;
+  transform: scale(1.03);
+}

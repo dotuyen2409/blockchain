@@ -1,0 +1,94 @@
+/* Tổng thể của trang dashboard */
+
+/* Thêm ảnh nền cho trang chủ */
+body {
+  background-image: url('../assets/img.jpg'); /* Thay 'path-to-your-image.jpg' bằng đường dẫn đúng đến ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Làm mờ container */
+.dashboard-container {
+  background: rgba(0, 0, 0, 0.7); /* Làm mờ nền với độ mờ 70% */
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Làm mờ nền phía sau container */
+  width: 60%;
+  margin: auto;
+}
+
+/* Tiêu đề của Dashboard */
+.dashboard-container h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Thông tin người dùng */
+.user-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.user-info p {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+/* Các button chức năng */
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.dashboard-buttons button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db; /* Màu nút */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+/* Khi di chuột vào nút */
+.dashboard-buttons button:hover {
+  background-color: #2980b9; /* Màu khi hover */
+  transform: scale(1.1); /* Tăng kích thước nút khi hover */
+}
+
+/* Hiệu ứng focus (nhấn) cho nút */
+.dashboard-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-info p {
+    font-size: 14px;
+  }
+}
