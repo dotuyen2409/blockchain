@@ -1,11 +1,16 @@
 package Project.BE_BlockChain_Wallet.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "transactions")
@@ -25,19 +30,18 @@ public class Transaction {
     @Column(name = "transaction_id")
     private String transactionId;
 
-    // Constructor không tham số
-    public Transaction() {}
+//    // Constructor không tham số
+//    public Transaction() {}
 
-    // Constructor để dễ dàng tạo giao dịch
-    public Transaction(User user, BigDecimal amount, String type, String transactionId) {
-        this.user = user;
-        this.amount = amount;
-        this.type = type;
-        this.timestamp = LocalDateTime.now();
-        this.transactionId = transactionId;
-    }
+//    // Constructor để dễ dàng tạo giao dịch
+//    public Transaction(User user, BigDecimal amount, String type, String transactionId) {
+//        this.user = user;
+//        this.amount = amount;
+//        this.type = type;
+//        this.timestamp = LocalDateTime.now();
+//        this.transactionId = transactionId;
+//    }
 
-    // Getter và Setter
 
     // Phương thức lấy walletAddress từ User
     public String getWalletAddress() {

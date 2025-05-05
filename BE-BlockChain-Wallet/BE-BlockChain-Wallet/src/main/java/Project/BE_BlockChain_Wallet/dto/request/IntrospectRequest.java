@@ -1,20 +1,16 @@
 package Project.BE_BlockChain_Wallet.dto.request;
 
+
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
+@Data
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@NoArgsConstructor
 public class IntrospectRequest {
 
-    private String token;
+    String token;
 
-    // Constructor
-    public IntrospectRequest(String token) {
-        this.token = token;
-    }
-
-    // Getter and Setter
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

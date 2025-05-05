@@ -6,6 +6,10 @@ import Project.BE_BlockChain_Wallet.model.User;
 import Project.BE_BlockChain_Wallet.repository.UserRepository;
 import Project.BE_BlockChain_Wallet.service.AuthService;
 import jakarta.validation.Valid;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -13,17 +17,21 @@ import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@Data
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @RestController
 @RequestMapping("/api/auth")
+
 public class AuthController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     @Autowired
-    private AuthService authService;
+    AuthService authService;
 
     @Autowired
-    private UserRepository userRepository;  // Tiêm phụ thuộc UserRepository vào đây
+    UserRepository userRepository;  // Tiêm phụ thuộc UserRepository vào đây
 
 
     // Đăng ký người dùng

@@ -1,6 +1,11 @@
 package Project.BE_BlockChain_Wallet.controller;
 
 import Project.BE_BlockChain_Wallet.service.InfuraService;
+import jnr.constants.platform.solaris.Access;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,13 +13,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Slf4j // Sử dụng Lombok để tự động tạo logger
 @RestController
 @RequestMapping("/api/blockchain")
 public class BlockchainController {
 
     @Autowired
-    private InfuraService infuraService;
+    InfuraService infuraService;
 
     // API để lấy số dư ví Ethereum
     @GetMapping("/balance/{walletAddress}")

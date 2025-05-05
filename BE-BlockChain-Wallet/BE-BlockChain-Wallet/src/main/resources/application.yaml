@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update  # Tạo bảng nếu chưa có hoặc cập nhật bảng đã tồn tại
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:

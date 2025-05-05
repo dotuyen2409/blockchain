@@ -1,18 +1,17 @@
 package Project.BE_BlockChain_Wallet.dto.response;
 
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuthResponse {
 
-    private String token;
-    private String walletAddress;
-
-    // Constructor với cả token và walletAddress
-    public AuthResponse(String token, String walletAddress) {
-        this.token = token;
-        this.walletAddress = walletAddress;
-    }
+    String token;
+    String walletAddress;
 
     // Constructor chỉ với token (dùng khi login)
     public AuthResponse(String token) {

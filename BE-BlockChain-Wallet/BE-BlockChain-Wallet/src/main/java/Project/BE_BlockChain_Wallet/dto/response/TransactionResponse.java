@@ -1,23 +1,20 @@
 package Project.BE_BlockChain_Wallet.dto.response;
 
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
-public class TransactionResponse {
-    private String transactionId;  // ID giao dịch
-    private String status;         // Trạng thái giao dịch
-    private String timestamp;      // Thời gian giao dịch
-    private String walletAddress;  // Địa chỉ ví
-    private Double amount;         // Số tiền giao dịch
+@AllArgsConstructor
+@NoArgsConstructor
 
-    // Constructor đầy đủ cho giao dịch
-    public TransactionResponse(String transactionId, String status, String timestamp, String walletAddress, Double amount) {
-        this.transactionId = transactionId;
-        this.status = status;
-        this.timestamp = timestamp;
-        this.walletAddress = walletAddress;
-        this.amount = amount;
-    }
+public class TransactionResponse {
+    String transactionId;  // ID giao dịch
+    String status;         // Trạng thái giao dịch
+    String timestamp;      // Thời gian giao dịch
+    String walletAddress;  // Địa chỉ ví
+    Double amount;         // Số tiền giao dịch
 
     // Constructor cho các trường hợp chỉ cần thông báo (không có walletAddress và amount)
     public TransactionResponse(String transactionId, String status, String timestamp, Object o) {

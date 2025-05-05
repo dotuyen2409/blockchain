@@ -25,7 +25,4 @@ public class AuthRequest {
     private String username;
     private String walletAddress;  // Thêm vào trường walletAddress
 
-    public String getUsername() {
-        return username;
-    }
 }
